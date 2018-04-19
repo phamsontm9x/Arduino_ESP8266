@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_turn_off).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                player.stop();
                 mSocket.emit("turnoff", 1);
             }
         });
@@ -57,15 +58,13 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     int number = (int) args[0];
-                    if (number > 255){
+                    if (number ==1){
                         if (!player.isPlaying()){
+                            player.setLooping(true);
                             player.start();
                         }
-                    } else {
-                        player.stop();
                     }
-                    tv.setText(args[0].toString());
-                    Toast.makeText(MainActivity.this, args[0].toString(), Toast.LENGTH_SHORT).show();
+                    tv.setText(String.valueOf(number));
                 }
             });
         }
