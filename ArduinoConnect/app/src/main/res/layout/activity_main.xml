@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.nhattruong.arduinoconnect.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_border_grey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_turn_off"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Turn off"
+        android:background="@drawable/bg_blue_border"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_turn_on"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btn_turn_on"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Turn on"
+        android:background="@drawable/bg_blue_border"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_turn_off"
+        app:layout_constraintLeft_toRightOf="@+id/btn_turn_off"/>
+</android.support.constraint.ConstraintLayout>
