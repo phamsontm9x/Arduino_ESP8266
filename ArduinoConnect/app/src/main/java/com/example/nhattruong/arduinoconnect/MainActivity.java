@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_turn_off).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                player.stop();
+                player.pause();
                 mSocket.emit("turnoff", 1);
             }
         });
