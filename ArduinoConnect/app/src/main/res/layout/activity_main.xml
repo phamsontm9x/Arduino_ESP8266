@@ -11,19 +11,41 @@
         android:id="@+id/tv_data"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_border_grey"
+        android:paddingBottom="8dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="8dp"
+        android:textColor="#000000"
+        android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Off"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/sw"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/sw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_state"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data" />
+
+    <!--<Button
         android:id="@+id/btn_turn_off"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -43,5 +65,5 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_data"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_turn_off"
-        app:layout_constraintLeft_toRightOf="@+id/btn_turn_off"/>
+        app:layout_constraintLeft_toRightOf="@+id/btn_turn_off"/>-->
 </android.support.constraint.ConstraintLayout>
